@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{float}
+
+
+%%%%%%%%%%%%%%%% Lengths %%%%%%%%%%%%%%%%
+\setlength{\textwidth}{15.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\oddsidemargin}{0.5cm}
+
+%%%%%%%%%%%%%%%% Variables %%%%%%%%%%%%%%%%
+\def\projet{6}
+\def\titre{Résolution approchée d'équations différentielles / Modélisation de systèmes dynamiques}
+\def\groupe{4}
+\def\equipe{5}
+\def\responsible{}
+\def\secretary{}
+\def\others{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%% Header %%%%%%%%%%%%%%%%
+\noindent\begin{minipage}{0.98\textwidth}
+	\vskip 0mm
+	\noindent
+	{ \begin{tabular}{p{7.5cm}}
+		{\bfseries \sffamily
+			Projet \projet} \\ 
+		{\itshape \titre}
+		\end{tabular}}
+	\hfill 
+	\fbox{\begin{tabular}{l}
+		{~\hfill \bfseries \sffamily Groupe \groupe\ - Equipe \equipe
+			\hfill~} \\[2mm] 
+		Responsable : \responsible \\
+		Secrétaire : \secretary \\
+		Codeurs : \others
+		\end{tabular}}
+	\vskip 4mm ~
+
+	~~~\parbox{0.95\textwidth}{\small \textit{Résumé~:} \sffamily
+		L'objectif de ce projet est de s'intéresser aux méthodes de résolution numérique d'équations différentielles ordinaires. Dans une première partie, nous nous intéresserons à ces méthodes de résolutions. Puis, dans une seconde partie, nous verrons l'application de ces méthodes pour un système proie-prédateur. Enfin, nous verrons dans une dernière partie une application à un pendule à $N$ maillons.
+	}
+	\vskip 1mm ~
+\end{minipage}
+
+%%%%%%%%%%%%%%%% Main part %%%%%%%%%%%%%%%%
+
+\input{sections/edo.tex}\label{edo}
+
+\input{sections/lotka-volterra.tex}\label{lotka-volterra}
+
+\input{sections/pendule-n-maillons.tex}\label{pendule-n-maillons}
+
+\end{document}
